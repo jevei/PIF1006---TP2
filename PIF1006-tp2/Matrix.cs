@@ -1,4 +1,6 @@
-﻿namespace PIF1006_tp2
+﻿using System;
+
+namespace PIF1006_tp2
 {
     public class Matrix2D
     {
@@ -17,12 +19,14 @@
         {
             // À compléter (0.25 pt)
             // Doit retourner une matrice qui est la transposée de celle de l'objet
+            throw new NotImplementedException();
         }
 
         public bool IsSquare()
         {
             // À compléter (0.25 pt)
             // Doit retourner vrai si la matrice est une matrice carrée, sinon faux
+            throw new NotImplementedException();
         }
 
         public double Determinant()
@@ -30,12 +34,14 @@
             // À compléter (2 pts)
             // Aura sans doute des méthodes suppl. privée à ajouter,
             // notamment de nature récursive. La matrice doit être carrée de prime à bord.
+            throw new NotImplementedException();
         }
 
         public Matrix2D Comatrix()
         {
             // À compléter (1 pt)
             // Doit retourner une matrice qui est la comatrice de celle de l'objet
+            throw new NotImplementedException();
         }
 
         public Matrix2D Inverse()
@@ -43,6 +49,7 @@
             // À compléter (0.25 pt)
             // Doit retourner une matrice qui est l'inverse de celle de l'objet;
             // Si le déterminant est nul ou la matrice non carrée, on retourne null.
+            throw new NotImplementedException();
         }
 
         public override string ToString()
@@ -54,6 +61,7 @@
             // | 3 5 7 |
             // | 6 2 5 |
             // | 5 4 5 |
+            throw new NotImplementedException();
         }
     }
 }

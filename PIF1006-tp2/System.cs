@@ -1,4 +1,7 @@
-﻿namespace PIF1006_tp2
+﻿using System;
+using System.IO;
+
+namespace PIF1006_tp2
 {
     public class System
     {
@@ -19,24 +22,37 @@
             // Doit vérifier si la matrix A est carrée et si B est une matrice avec le même nb
             // de ligne que A et une seule colonne, sinon cela retourne faux.
             // Avant d'agir avec le système, il faut toujours faire cette validation
+            throw new NotImplementedException();
         }
 
         public Matrix2D SolveUsingCramer()
         {
             // À compléter (1 pt)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
+            throw new NotImplementedException();
         }
 
         public Matrix2D SolveUsingInverseMatrix()
         {
             // À compléter (0.25 pt)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
+            throw new NotImplementedException();
         }
 
         public Matrix2D SolveUsingGauss()
         {
             // À compléter (1 pts)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
+            throw new NotImplementedException();
+        }
+
+        public void LoadFromFile(string filePath)
+        {
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (string line in lines)
+            {
+                Console.WriteLine(line);
+            }
         }
 
         public override string ToString()
@@ -47,6 +63,7 @@
             // 3x1 + 5x2 + 7x3 = 9
             // 6x1 + 2x2 + 5x3 = -1
             // 5x1 + 4x2 + 5x3 = 5
+            throw new NotImplementedException();
         }
     }
 }
