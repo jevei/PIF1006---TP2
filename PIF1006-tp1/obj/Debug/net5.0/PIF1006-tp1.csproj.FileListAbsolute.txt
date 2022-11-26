@@ -1,0 +1,16 @@
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\bin\Debug\net5.0\PIF1006-tp1.exe
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\bin\Debug\net5.0\PIF1006-tp1.deps.json
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\bin\Debug\net5.0\PIF1006-tp1.runtimeconfig.json
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\bin\Debug\net5.0\PIF1006-tp1.runtimeconfig.dev.json
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\bin\Debug\net5.0\PIF1006-tp1.dll
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\bin\Debug\net5.0\ref\PIF1006-tp1.dll
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\bin\Debug\net5.0\PIF1006-tp1.pdb
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\obj\Debug\net5.0\PIF1006-tp1.csprojAssemblyReference.cache
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\obj\Debug\net5.0\PIF1006-tp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\obj\Debug\net5.0\PIF1006-tp1.AssemblyInfoInputs.cache
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\obj\Debug\net5.0\PIF1006-tp1.AssemblyInfo.cs
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\obj\Debug\net5.0\PIF1006-tp1.csproj.CoreCompileInputs.cache
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\obj\Debug\net5.0\PIF1006-tp1.dll
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\obj\Debug\net5.0\ref\PIF1006-tp1.dll
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\obj\Debug\net5.0\PIF1006-tp1.pdb
+C:\Users\Adamz\source\repos\PIF1006\PIF1006-tp1\obj\Debug\net5.0\PIF1006-tp1.genruntimeconfig.cache
