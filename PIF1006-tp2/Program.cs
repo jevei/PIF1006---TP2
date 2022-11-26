@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PIF1006_tp2
+﻿namespace PIF1006_tp2
 {
 
     // - Répartition des points -:

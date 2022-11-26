@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PIF1006_tp2
+﻿namespace PIF1006_tp2
 {
     public class Matrix2D
     {
