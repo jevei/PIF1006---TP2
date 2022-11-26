@@ -3,3 +3,8 @@ C:\Users\Predator\Desktop\université\session3\PIF1006\PIF1006 - TP2 - Template\
 C:\Users\Predator\Desktop\université\session3\PIF1006\PIF1006 - TP2 - Template\PIF1006\PIF1006-tp2\obj\Debug\net5.0\PIF1006-tp2.AssemblyInfoInputs.cache
 C:\Users\Predator\Desktop\université\session3\PIF1006\PIF1006 - TP2 - Template\PIF1006\PIF1006-tp2\obj\Debug\net5.0\PIF1006-tp2.AssemblyInfo.cs
 C:\Users\Predator\Desktop\université\session3\PIF1006\PIF1006 - TP2 - Template\PIF1006\PIF1006-tp2\obj\Debug\net5.0\PIF1006-tp2.csproj.CoreCompileInputs.cache
+C:\Users\Predator\Desktop\université\session3\PIF1006\PIF1006---TP2\PIF1006-tp2\obj\Debug\net5.0\PIF1006-tp2.csproj.AssemblyReference.cache
+C:\Users\Predator\Desktop\université\session3\PIF1006\PIF1006---TP2\PIF1006-tp2\obj\Debug\net5.0\PIF1006-tp2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Predator\Desktop\université\session3\PIF1006\PIF1006---TP2\PIF1006-tp2\obj\Debug\net5.0\PIF1006-tp2.AssemblyInfoInputs.cache
+C:\Users\Predator\Desktop\université\session3\PIF1006\PIF1006---TP2\PIF1006-tp2\obj\Debug\net5.0\PIF1006-tp2.AssemblyInfo.cs
+C:\Users\Predator\Desktop\université\session3\PIF1006\PIF1006---TP2\PIF1006-tp2\obj\Debug\net5.0\PIF1006-tp2.csproj.CoreCompileInputs.cache

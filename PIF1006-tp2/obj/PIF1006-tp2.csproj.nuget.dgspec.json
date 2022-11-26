@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006 - TP2 - Template\\PIF1006\\PIF1006-tp2\\PIF1006-tp2.csproj": {}
+    "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006---TP2\\PIF1006-tp2\\PIF1006-tp2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006 - TP2 - Template\\PIF1006\\PIF1006-tp2\\PIF1006-tp2.csproj": {
+    "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006---TP2\\PIF1006-tp2\\PIF1006-tp2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006 - TP2 - Template\\PIF1006\\PIF1006-tp2\\PIF1006-tp2.csproj",
+        "projectUniqueName": "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006---TP2\\PIF1006-tp2\\PIF1006-tp2.csproj",
         "projectName": "PIF1006-tp2",
-        "projectPath": "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006 - TP2 - Template\\PIF1006\\PIF1006-tp2\\PIF1006-tp2.csproj",
+        "projectPath": "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006---TP2\\PIF1006-tp2\\PIF1006-tp2.csproj",
         "packagesPath": "C:\\Users\\Predator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006 - TP2 - Template\\PIF1006\\PIF1006-tp2\\obj\\",
+        "outputPath": "C:\\Users\\Predator\\Desktop\\université\\session3\\PIF1006\\PIF1006---TP2\\PIF1006-tp2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

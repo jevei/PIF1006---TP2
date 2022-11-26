@@ -16,17 +16,17 @@ namespace PIF1006_tp2
             //---- exemple --- à ne pas utiliser dans votre remise
 
             // On peut créer une matrice comme ceci:
-            Matrix2D matrixA = new Matrix2D("A", 3, 3);
-            Matrix2D matrixB = new Matrix2D("B", 3, 1);
+            /*Matrix2D matrixA = new Matrix2D("A", 3, 3);
+            Matrix2D matrixB = new Matrix2D("B", 3, 1);*/
 
             // Et on devrait pouvoir construire un système typiquement commec:
-            System system = new System(matrixA, matrixB);
+            //System system = new System(matrixA, matrixB);
 
             // Puis résoudre selon différentes méthodes:
-            Matrix2D matrixX;
+            /*Matrix2D matrixX;
             matrixX = system.SolveUsingCramer();
             matrixX = system.SolveUsingGauss();
-            matrixX = system.SolveUsingInverseMatrix();
+            matrixX = system.SolveUsingInverseMatrix();*/
 
 
             // Vous pouvez vous injecter un exemple de système si vous le souhaitez pour vous aider,
