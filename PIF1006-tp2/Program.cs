@@ -1,4 +1,9 @@
-﻿namespace PIF1006_tp2
+﻿using System;
+using System.IO;
+using System.Reflection;
+using System.Windows.Forms;
+
+namespace PIF1006_tp2
 {
 
     // - Répartition des points -:
@@ -7,8 +12,9 @@
     // System.cs: 3 pts
     // Rapport + guide: 1 pt)
 
-    class Program
+    class Program///coéquipier : travail fait seul, donc seulement Jérémy Veillette
     {
+        [STAThread]
         static void Main(string[] args)
         {
             //---- exemple --- à ne pas utiliser dans votre remise
@@ -67,6 +73,38 @@
              * Après chaque option on revient au menu utilisateur, sauf pour quitter bien évidemment.
              * 
              */
+            ListMatrix listMatrix = new ListMatrix();
+            string input;
+            string folder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"default.txt");//Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\default.txt\";
+            do
+            {
+                Console.WriteLine("Bonjour,\nVeuillez choisir parmi les choix suivant.\n1-Charger un fichier en spécifiant le chemin.\n2-Afficher le système.\n3-Résoudre avec Cramer.\n4-Résoudre avec la méthode de la matrice inverse. \n5-Résoudre avec Gauss.");
+                input = Console.ReadLine();
+                //Console.WriteLine(input);
+                if (input == "1")
+                {
+                    Console.WriteLine("Veuillez sélectionner le fichier(choisir un fichier remplace l'ancien).\n1-default.txt\n2-Au choix.");
+                    input = Console.ReadLine();
+                    if (input == "1")
+                    {
+                        input = folder;
+                        listMatrix.LoadFromFile(input);
+                    }
+                    else if (input == "2")
+                    {
+                        OpenFileDialog dialog = new OpenFileDialog()
+                        {
+                            Filter = "TXT Files(*.txt;)|*.txt;"
+                        };
+                        if (DialogResult.OK == dialog.ShowDialog())
+                        {
+                            input = dialog.FileName;
+                            listMatrix.LoadFromFile(input);
+                        }
+                    }
+                    //Console.WriteLine(input);
+                }
+            } while (input != "7");
         }
     }
 }

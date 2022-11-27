@@ -46,15 +46,6 @@ namespace PIF1006_tp2
             throw new NotImplementedException();
         }
 
-        public void LoadFromFile(string filePath)
-        {
-            string[] lines = File.ReadAllLines(filePath);
-            foreach (string line in lines)
-            {
-                Console.WriteLine(line);
-            }
-        }
-
         public override string ToString()
         {
             // À compléter (0.5 pt)
