@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace PIF1006_tp2
 {
@@ -50,6 +52,19 @@ namespace PIF1006_tp2
             // Doit retourner une matrice qui est l'inverse de celle de l'objet;
             // Si le déterminant est nul ou la matrice non carrée, on retourne null.
             throw new NotImplementedException();
+        }
+
+        internal void SetValue(ObservableCollection<string> values)
+        {
+            int compteur = 0;
+            for (int i = 0; i != Matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j != Matrix.GetLength(1); j++)
+                {
+                    Matrix[i, j] = Convert.ToDouble(values.ElementAt(compteur));
+                    compteur++;
+                }
+            }
         }
 
         public override string ToString()
