@@ -76,7 +76,17 @@ namespace PIF1006_tp2
             // | 3 5 7 |
             // | 6 2 5 |
             // | 5 4 5 |
-            throw new NotImplementedException();
+            string temp = "";
+            for (int i = 0; i != Matrix.GetLength(0); i++)
+            {
+                temp += "| ";
+                for (int j = 0; j != Matrix.GetLength(1); j++)
+                {
+                    temp += Matrix[i, j] + " ";
+                }
+                temp += "|\n";
+            }
+            return temp;
         }
     }
 }

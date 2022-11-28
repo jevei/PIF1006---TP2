@@ -86,7 +86,24 @@ namespace PIF1006_tp2
             // 6x1 + 2x2 + 5x3 = -1
             // 5x1 + 4x2 + 5x3 = 5
             IsValid();
-            throw new NotImplementedException();
+            string temp = "";
+            for (int i = 0; i != A.Matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j != A.Matrix.GetLength(1); j++)
+                {
+                    temp += A.Matrix[i, j] + "x" + (j + 1) + " ";
+                    if (j + 1 != A.Matrix.GetLength(1))
+                    {
+                        temp += "+ ";
+                    }
+                    else
+                    {
+                        temp += "= " + B.Matrix[i, 0];
+                    }
+                }
+                temp += "\n";
+            }
+            return temp;
         }
     }
 }

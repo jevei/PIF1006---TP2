@@ -74,7 +74,7 @@ namespace PIF1006_tp2
              * Après chaque option on revient au menu utilisateur, sauf pour quitter bien évidemment.
              * 
              */
-            ListMatrix listMatrix;
+            ListMatrix listMatrix = null;
             System system = null;
             string input;
             string folder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"default.txt");//Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\default.txt\";
@@ -111,9 +111,9 @@ namespace PIF1006_tp2
                 }
                 else if (input == "2")
                 {
-                    if (system != null)
+                    if (system != null && listMatrix != null)
                     {
-                        system.ToString();
+                        Console.WriteLine(system.ToString() + "\n" + listMatrix.ToString());
                     }
                 }
                 else if (input == "3")

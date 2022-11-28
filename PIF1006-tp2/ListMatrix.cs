@@ -125,5 +125,15 @@ namespace PIF1006_tp2
         {
             return MatrixList;
         }
+
+        public override string ToString()
+        {
+            string temp = "";
+            foreach (Matrix2D element in MatrixList)
+            {
+                temp += "\n" + element.ToString();
+            }
+            return temp;
+        }
     }
 }
