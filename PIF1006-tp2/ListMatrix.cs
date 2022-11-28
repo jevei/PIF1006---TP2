@@ -120,5 +120,10 @@ namespace PIF1006_tp2
             }
             return nbCol;
         }
+
+        internal ObservableCollection<Matrix2D> GetMatrix()
+        {
+            return MatrixList;
+        }
     }
 }

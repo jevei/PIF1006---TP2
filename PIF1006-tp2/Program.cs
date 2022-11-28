@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -73,7 +74,8 @@ namespace PIF1006_tp2
              * Après chaque option on revient au menu utilisateur, sauf pour quitter bien évidemment.
              * 
              */
-            ListMatrix listMatrix = new ListMatrix();
+            ListMatrix listMatrix;
+            System system = null;
             string input;
             string folder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"default.txt");//Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\default.txt\";
             do
@@ -83,12 +85,14 @@ namespace PIF1006_tp2
                 //Console.WriteLine(input);
                 if (input == "1")
                 {
+                    listMatrix = new ListMatrix();
                     Console.WriteLine("Veuillez sélectionner le fichier(choisir un fichier remplace l'ancien).\n1-default.txt\n2-Au choix.");
                     input = Console.ReadLine();
                     if (input == "1")
                     {
                         input = folder;
                         listMatrix.LoadFromFile(input);
+                        system = new System(listMatrix.GetMatrix().ElementAt(0), listMatrix.GetMatrix().ElementAt(1));
                     }
                     else if (input == "2")
                     {
@@ -100,9 +104,29 @@ namespace PIF1006_tp2
                         {
                             input = dialog.FileName;
                             listMatrix.LoadFromFile(input);
+                            system = new System(listMatrix.GetMatrix().ElementAt(0), listMatrix.GetMatrix().ElementAt(1));
                         }
                     }
                     //Console.WriteLine(input);
+                }
+                else if (input == "2")
+                {
+                    if (system != null)
+                    {
+                        system.ToString();
+                    }
+                }
+                else if (input == "3")
+                {
+
+                }
+                else if (input == "4")
+                {
+
+                }
+                else if (input == "5")
+                {
+
                 }
             } while (input != "7");
         }
