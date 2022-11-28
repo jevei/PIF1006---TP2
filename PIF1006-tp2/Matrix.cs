@@ -28,7 +28,23 @@ namespace PIF1006_tp2
         {
             // À compléter (0.25 pt)
             // Doit retourner vrai si la matrice est une matrice carrée, sinon faux
-            throw new NotImplementedException();
+            int nbCol = 0;
+            int nbRow = 0;
+            for (int i = 0; i != Matrix.GetLength(0); i++)
+            {
+                nbRow++;
+                for (int j = 0; j != Matrix.GetLength(1); j++)
+                {
+                    nbCol++;
+                }
+            }
+            if (nbCol % nbRow == 0)
+            {
+                return true;
+            }
+            Console.WriteLine("Erreur: Matrice non carrée.");
+            Environment.Exit(0);
+            return false;
         }
 
         public double Determinant()

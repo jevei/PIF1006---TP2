@@ -27,16 +27,8 @@ namespace PIF1006_tp2
             for (int i = 0; i != A.Matrix.GetLength(0); i++)
             {
                 nbRow++;
-                for (int j = 0; j != A.Matrix.GetLength(1); j++)
-                {
-                    nbCol++;
-                }
             }
-            if (nbCol % nbRow == 0)
-            {
-                carre = true;
-                nbCol = 0;
-            }
+            carre = A.IsSquare();
             for (int i = 0; i != B.Matrix.GetLength(0); i++)
             {
                 for (int j = 0; j != B.Matrix.GetLength(1); j++)
@@ -58,6 +50,11 @@ namespace PIF1006_tp2
             // À compléter (1 pt)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
             IsValid();
+            double det;
+            double detX;
+            double detY;
+            double detZ;
+
             throw new NotImplementedException();
         }
 
