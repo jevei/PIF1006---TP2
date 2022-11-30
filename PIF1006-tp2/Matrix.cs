@@ -21,7 +21,23 @@ namespace PIF1006_tp2
         {
             // À compléter (0.25 pt)
             // Doit retourner une matrice qui est la transposée de celle de l'objet
-            throw new NotImplementedException();
+            Matrix2D retour;
+            double[,] tMatrix = new double[Matrix.GetLength(1), Matrix.GetLength(0)];
+            for (int i = 0; i != Matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j != Matrix.GetLength(1); j++)
+                {
+                    tMatrix[j, i] = Matrix[i, j];
+                }
+            }
+            retour = new Matrix2D(Name + "1", Matrix.GetLength(1), Matrix.GetLength(0));
+            retour.SetValue(tMatrix);
+            return retour;
+        }
+
+        private void SetValue(double[,] tMatrix)
+        {
+            Matrix = tMatrix;
         }
 
         public bool IsSquare()

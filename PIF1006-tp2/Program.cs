@@ -118,7 +118,10 @@ namespace PIF1006_tp2
                 }
                 else if (input == "3")
                 {
-
+                    if (system != null && listMatrix != null)
+                    {
+                        Console.WriteLine(system.SolveUsingCramer().ToString());
+                    }
                 }
                 else if (input == "4")
                 {
