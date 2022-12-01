@@ -50,6 +50,7 @@ namespace PIF1006_tp2
             // À compléter (1 pt)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
             IsValid();
+            A.Determinant();
             return A.Transpose();
         }
 

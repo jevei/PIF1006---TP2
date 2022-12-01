@@ -68,7 +68,13 @@ namespace PIF1006_tp2
             // À compléter (2 pts)
             // Aura sans doute des méthodes suppl. privée à ajouter,
             // notamment de nature récursive. La matrice doit être carrée de prime à bord.
-            throw new NotImplementedException();
+            if (!IsSquare())
+            {
+                Console.WriteLine("Erreur: Matrice non carrée.");
+                Environment.Exit(0);
+            }
+            double retour = CalculMatrice.Determinant(Matrix, (int)Math.Sqrt(Matrix.Length));
+            return retour;
         }
 
         public Matrix2D Comatrix()
