@@ -80,7 +80,7 @@ namespace PIF1006_tp2
             string folder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"default.txt");//Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\default.txt\";
             do
             {
-                Console.WriteLine("Bonjour,\nVeuillez choisir parmi les choix suivant.\n1-Charger un fichier en spécifiant le chemin.\n2-Afficher le système.\n3-Résoudre avec Cramer.\n4-Résoudre avec la méthode de la matrice inverse. \n5-Résoudre avec Gauss. \n7-Quitter");
+                Console.WriteLine("Bonjour,\nVeuillez choisir parmi les choix suivant.\n1-Charger un fichier en spécifiant le chemin.\n2-Afficher le système.\n3-Résoudre avec Cramer.\n4-Résoudre avec la méthode de la matrice inverse. \n5-Résoudre avec Gauss. \n6-Quitter");
                 input = Console.ReadLine();
                 //Console.WriteLine(input);
                 if (input == "1")
@@ -125,13 +125,19 @@ namespace PIF1006_tp2
                 }
                 else if (input == "4")
                 {
-
+                    if (system != null && listMatrix != null)
+                    {
+                        Console.WriteLine(system.SolveUsingInverseMatrix().ToString());
+                    }
                 }
                 else if (input == "5")
                 {
-
+                    if (system != null && listMatrix != null)
+                    {
+                        Console.WriteLine(system.SolveUsingGauss().ToString());
+                    }
                 }
-            } while (input != "7");
+            } while (input != "6");
         }
     }
 }

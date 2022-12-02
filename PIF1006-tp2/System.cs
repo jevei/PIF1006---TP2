@@ -23,12 +23,11 @@ namespace PIF1006_tp2
             // Avant d'agir avec le système, il faut toujours faire cette validation
             int nbRow = 0;
             int nbCol = 0;
-            bool carre = false;
             for (int i = 0; i != A.Matrix.GetLength(0); i++)
             {
                 nbRow++;
             }
-            carre = A.IsSquare();
+            bool carre = A.IsSquare();
             for (int i = 0; i != B.Matrix.GetLength(0); i++)
             {
                 for (int j = 0; j != B.Matrix.GetLength(1); j++)
@@ -50,8 +49,7 @@ namespace PIF1006_tp2
             // À compléter (1 pt)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
             IsValid();
-            A.Determinant();
-            return A.Transpose();
+            return A.Comatrix();
         }
 
         public Matrix2D SolveUsingInverseMatrix()

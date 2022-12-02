@@ -81,7 +81,37 @@ namespace PIF1006_tp2
         {
             // À compléter (1 pt)
             // Doit retourner une matrice qui est la comatrice de celle de l'objet
-            throw new NotImplementedException();
+            if (Matrix.GetLength(0) == 2 && Matrix.GetLength(1) == 2)
+            {
+                Matrix2D com2X2 = new Matrix2D("Comatrix", 2, 2);
+                com2X2.Matrix = new double[2, 2] { { Matrix[1, 1], Matrix[1, 0] * (-1) }, { Matrix[0, 1] * (-1), Matrix[0, 0] } };
+                return com2X2;
+            }
+            Matrix2D com = new Matrix2D("Comatrix", Matrix.GetLength(0), Matrix.GetLength(1));
+            bool positif = true;
+            for (int i = 0; i != com.Matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j != com.Matrix.GetLength(1); j++)
+                {
+                    if (positif == true)
+                    {
+                        com.Matrix[i, j] = CalculMatrice.SousMatrice(i, j, Matrix).Determinant();
+                        positif = false;
+                    }
+                    else
+                    {
+                        com.Matrix[i, j] = CalculMatrice.SousMatrice(i, j, Matrix).Determinant() * (-1);
+                        positif = true;
+                    }
+                }
+                positif = !positif;
+            }
+            return com;
+        }
+
+        internal void SetMatrix(double[,] temp)
+        {
+            Matrix = temp;
         }
 
         public Matrix2D Inverse()
