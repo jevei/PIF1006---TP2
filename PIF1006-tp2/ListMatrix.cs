@@ -7,7 +7,7 @@ namespace PIF1006_tp2
 {
     class ListMatrix
     {
-        private ObservableCollection<Matrix2D> MatrixList;
+        private readonly ObservableCollection<Matrix2D> MatrixList;
         private char Letter;
         private int Barem;
 
