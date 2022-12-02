@@ -81,7 +81,7 @@ namespace PIF1006_tp2
         {
             // À compléter (1 pt)
             // Doit retourner une matrice qui est la comatrice de celle de l'objet
-            if (Matrix.GetLength(0) == 2 && Matrix.GetLength(1) == 2)
+            if ((int)Math.Sqrt(Matrix.Length) == 2)
             {
                 Matrix2D com2X2 = new Matrix2D("Comatrix", 2, 2);
                 com2X2.Matrix = new double[2, 2] { { Matrix[1, 1], Matrix[1, 0] * (-1) }, { Matrix[0, 1] * (-1), Matrix[0, 0] } };
@@ -114,12 +114,29 @@ namespace PIF1006_tp2
             Matrix = temp;
         }
 
-        public Matrix2D Inverse()
+        public Matrix2D Inverse()//(1 / Determinant()) * Comatrix().Transpose() = Inverse();
         {
             // À compléter (0.25 pt)
             // Doit retourner une matrice qui est l'inverse de celle de l'objet;
             // Si le déterminant est nul ou la matrice non carrée, on retourne null.
-            throw new NotImplementedException();
+            if (!IsSquare())
+            {
+                return null;
+            }
+            else if (Determinant() == 0)
+            {
+                return null;
+            }
+            double result = 1 / Determinant();
+            Matrix2D transposeComa = Comatrix().Transpose();
+            for (int i = 0; i != transposeComa.Matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j != transposeComa.Matrix.GetLength(1); j++)
+                {
+                    transposeComa.Matrix[i, j] *= result;
+                }
+            }
+            return transposeComa;
         }
 
         internal void SetValue(ObservableCollection<string> values)
