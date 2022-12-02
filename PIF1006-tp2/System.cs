@@ -49,7 +49,7 @@ namespace PIF1006_tp2
             // À compléter (1 pt)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
             IsValid();
-            return A.Inverse();
+            throw new NotImplementedException();
         }
 
         public Matrix2D SolveUsingInverseMatrix()
