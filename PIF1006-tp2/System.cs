@@ -49,7 +49,32 @@ namespace PIF1006_tp2
             // À compléter (1 pt)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
             IsValid();
-            throw new NotImplementedException();
+            double det = A.Determinant();
+            Matrix2D result = new Matrix2D("Cramer", B.Matrix.GetLength(0), B.Matrix.GetLength(1));
+            for (int i = 0; i != B.Matrix.GetLength(0); i++)
+            {
+                Matrix2D temp = new Matrix2D("temp", A.Matrix.GetLength(0), A.Matrix.GetLength(1));
+                temp.SetMatrix(SetupMatrice(A.Matrix));
+                for (int j = 0; j != temp.Matrix.GetLength(0); j++)
+                {
+                    temp.Matrix[j, i] = B.Matrix[j, 0];
+                }
+                result.Matrix[i, 0] = temp.Determinant() / det;
+            }
+            return result;
+        }
+
+        private double[,] SetupMatrice(double[,] matrix)
+        {
+            double[,] retour = new double[matrix.GetLength(0), matrix.GetLength(0)];
+            for (int i = 0; i != matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j != matrix.GetLength(0); j++)
+                {
+                    retour[i, j] = matrix[i, j];
+                }
+            }
+            return retour;
         }
 
         public Matrix2D SolveUsingInverseMatrix()
