@@ -93,6 +93,7 @@ namespace PIF1006_tp2
                         input = folder;
                         listMatrix.LoadFromFile(input);
                         system = new System(listMatrix.GetMatrix().ElementAt(0), listMatrix.GetMatrix().ElementAt(1));
+                        system.IsValid();
                     }
                     else if (input == "2")
                     {
@@ -105,6 +106,7 @@ namespace PIF1006_tp2
                             input = dialog.FileName;
                             listMatrix.LoadFromFile(input);
                             system = new System(listMatrix.GetMatrix().ElementAt(0), listMatrix.GetMatrix().ElementAt(1));
+                            system.IsValid();
                         }
                     }
                     //Console.WriteLine(input);
