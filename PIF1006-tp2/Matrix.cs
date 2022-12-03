@@ -155,8 +155,16 @@ namespace PIF1006_tp2
             {
                 for (int j = 0; j != Matrix.GetLength(1); j++)
                 {
-                    Matrix[i, j] = Convert.ToDouble(values.ElementAt(compteur));
-                    compteur++;
+                    if (Double.TryParse(values.ElementAt(compteur), out Matrix[i, j]))
+                    {
+                        Matrix[i, j] = Convert.ToDouble(values.ElementAt(compteur));
+                        compteur++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Erreur: Mauvais formatage du fichier.");
+                        Environment.Exit(0);
+                    }
                 }
             }
         }
