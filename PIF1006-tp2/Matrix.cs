@@ -104,7 +104,6 @@ namespace PIF1006_tp2
                         positif = true;
                     }
                 }
-                positif = !positif;
             }
             return com;
         }

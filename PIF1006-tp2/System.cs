@@ -82,7 +82,29 @@ namespace PIF1006_tp2
             // À compléter (0.25 pt)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
             IsValid();
-            throw new NotImplementedException();
+            Matrix2D inverse = A.Inverse();
+            Matrix2D result = new Matrix2D("InverseResult", B.Matrix.GetLength(0), B.Matrix.GetLength(1));
+            Matrix2D temp = new Matrix2D("temp", inverse.Matrix.GetLength(0), inverse.Matrix.GetLength(1));
+            temp.SetMatrix(SetupMatrice(inverse.Matrix));
+            for (int i = 0; i != B.Matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j != temp.Matrix.GetLength(0); j++)
+                {
+                    temp.Matrix[i, j] *= B.Matrix[j, 0];
+                }
+                result.Matrix[i, 0] = RowSum(i, temp.Matrix);
+            }
+            return result;
+        }
+
+        private double RowSum(int i, double[,] matrix)
+        {
+            double result = 0;
+            for (int j = 0; j != matrix.GetLength(0); j++)
+            {
+                result += matrix[i, j];
+            }
+            return result;
         }
 
         public Matrix2D SolveUsingGauss()
