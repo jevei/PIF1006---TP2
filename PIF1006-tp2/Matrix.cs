@@ -138,6 +138,14 @@ namespace PIF1006_tp2
             return transposeComa;
         }
 
+        internal void SoustraireFacteur(int j, double facteur, double[,] matrix, int i)
+        {
+            for (int x = 0; x != Matrix.GetLength(1); x++)
+            {
+                Matrix[j, x] -= facteur * Matrix[i, x];
+            }
+        }
+
         internal void SetValue(ObservableCollection<string> values)
         {
             int compteur = 0;

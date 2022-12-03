@@ -66,10 +66,10 @@ namespace PIF1006_tp2
 
         private double[,] SetupMatrice(double[,] matrix)
         {
-            double[,] retour = new double[matrix.GetLength(0), matrix.GetLength(0)];
+            double[,] retour = new double[matrix.GetLength(0), matrix.GetLength(1)];
             for (int i = 0; i != matrix.GetLength(0); i++)
             {
-                for (int j = 0; j != matrix.GetLength(0); j++)
+                for (int j = 0; j != matrix.GetLength(1); j++)
                 {
                     retour[i, j] = matrix[i, j];
                 }
@@ -107,12 +107,37 @@ namespace PIF1006_tp2
             return result;
         }
 
-        public Matrix2D SolveUsingGauss()
+        public Matrix2D SolveUsingGauss()//0=Lx-Ly*z
         {
             // À compléter (1 pts)
             // Doit retourner une matrice X de même dimension que B avec les valeurs des inconnus 
             IsValid();
-            throw new NotImplementedException();
+            Matrix2D result = new Matrix2D("Gauss", B.Matrix.GetLength(0), B.Matrix.GetLength(1));
+            Matrix2D temp = new Matrix2D("temp", A.Matrix.GetLength(0), A.Matrix.GetLength(1));
+            result.SetMatrix(SetupMatrice(B.Matrix));
+            temp.SetMatrix(SetupMatrice(A.Matrix));
+            for (int i = 0; i != A.Matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j != temp.Matrix.GetLength(1); j++)
+                {
+                    if (j != i)
+                    {
+                        double facteur = FindFacteur(temp.Matrix[i, i], temp.Matrix[j, i]);
+                        temp.SoustraireFacteur(j, facteur, temp.Matrix, i);
+                        result.SoustraireFacteur(j, facteur, temp.Matrix, i);
+                    }
+                }
+            }
+            for (int i = 0; i != A.Matrix.GetLength(0); i++)
+            {
+                result.Matrix[i, 0] /= temp.Matrix[i, i];
+            }
+            return result;
+        }
+
+        private double FindFacteur(double v1, double v2)//pour trouver le z de 0=Lx-Ly*z
+        {
+            return v2 / v1;
         }
 
         public override string ToString()
