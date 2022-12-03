@@ -17,7 +17,7 @@ namespace PIF1006_tp2
                 ObservableCollection<double[,]> subMatrices = new ObservableCollection<double[,]>();
                 for (int i = 0; i != v; i++)
                 {
-                    subMatrices.Add(generateSubMatrice(i, matrix));
+                    subMatrices.Add(GenerateSubMatrice(i, matrix));
                 }
                 for (int i = 0; i != v; i++)
                 {
@@ -34,7 +34,7 @@ namespace PIF1006_tp2
             return retour;
         }
 
-        private static double[,] generateSubMatrice(int i, double[,] matrix)
+        private static double[,] GenerateSubMatrice(int i, double[,] matrix)
         {
             double[,] temp = new double[matrix.GetLength(0) - 1, matrix.GetLength(0) - 1];
             int compteur = 0;

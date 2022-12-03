@@ -123,8 +123,8 @@ namespace PIF1006_tp2
                     if (j != i)
                     {
                         double facteur = FindFacteur(temp.Matrix[i, i], temp.Matrix[j, i]);
-                        temp.SoustraireFacteur(j, facteur, temp.Matrix, i);
-                        result.SoustraireFacteur(j, facteur, temp.Matrix, i);
+                        temp.SoustraireFacteur(j, facteur, i);
+                        result.SoustraireFacteur(j, facteur, i);
                     }
                 }
             }

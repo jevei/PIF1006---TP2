@@ -83,8 +83,10 @@ namespace PIF1006_tp2
             // Doit retourner une matrice qui est la comatrice de celle de l'objet
             if ((int)Math.Sqrt(Matrix.Length) == 2)
             {
-                Matrix2D com2X2 = new Matrix2D("Comatrix", 2, 2);
-                com2X2.Matrix = new double[2, 2] { { Matrix[1, 1], Matrix[1, 0] * (-1) }, { Matrix[0, 1] * (-1), Matrix[0, 0] } };
+                Matrix2D com2X2 = new Matrix2D("Comatrix", 2, 2)
+                {
+                    Matrix = new double[2, 2] { { Matrix[1, 1], Matrix[1, 0] * (-1) }, { Matrix[0, 1] * (-1), Matrix[0, 0] } }
+                };
                 return com2X2;
             }
             Matrix2D com = new Matrix2D("Comatrix", Matrix.GetLength(0), Matrix.GetLength(1));
@@ -138,7 +140,7 @@ namespace PIF1006_tp2
             return transposeComa;
         }
 
-        internal void SoustraireFacteur(int j, double facteur, double[,] matrix, int i)
+        internal void SoustraireFacteur(int j, double facteur, int i)
         {
             for (int x = 0; x != Matrix.GetLength(1); x++)
             {
